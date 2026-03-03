@@ -1,0 +1,101 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* MUST: Background Image */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            color: gold;
+        }
+/* --- Continued Styles --- */
+
+/* Fixes the spelling from your HTML and adds the Glassmorphism card */
+.cointainer {
+    width: 95%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+    backdrop-filter: blur(8px);      /* Frosted glass effect */
+    padding: 40px;
+    border: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    
+    /* This makes the Left and Right divs sit side-by-side */
+    display: flex; 
+    flex-wrap: wrap; /* Allows it to stack on mobile */
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%; /* Spans the full width above the columns */
+    margin-bottom: 30px;
+    border-bottom: 2px double gold;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+
+.left, .right {
+    flex: 1;           
+    min-width: 320px;  
+    padding: 15px;
+}
+
+.menu-item {
+    margin-bottom: 30px;
+}
+
+.menu-item h1 {
+    font-size: 1.7rem;
+    color: white;
+    text-transform: uppercase;
+    border-left: 4px solid gold;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+
+.menu-item h4 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 8px 0;
+    font-weight: 400;
+    color: #eee;
+    font-size: 1.1rem;
+}
+
+.menu-item h4 span {
+    color: gold;
+    font-weight: bold;
+    font-family: 'Courier New', monospace; 
+}
+
+
+.menu-item h4:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
+/* Responsive fix for phones */
+@media (max-width: 768px) {
+    .cointainer {
+        flex-direction: column; 
+        padding: 20px;
+    }
+    .header h1 { font-size: 2rem; }
+}
